@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Staff Directory - TTU-CSD</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-ring"><div class="loader-ring-inner"></div></div>
+    <div class="loader-code"></div>
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+    <p class="loader-label">Loading…</p>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a class="logo" href="index.html"><img src="images/logo.png" alt="TTU-CSD Logo" class="logo-img"/> TTU-CSD</a>
+      <div class="mobile-nav-wrapper">
+        <nav>
+          <ul class="nav-menu">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="programmes.html">Programmes</a></li>
+            <li><a class="nav-link active" href="staff.html">Staff</a></li>
+            <li><a class="nav-link" href="events.html">Events</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+            <li><a class="nav-link" href="book.html">Book Appointment</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <input class="search-input" placeholder="Search..." type="text"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <button class="btn btn-text">Enquire</button>
+        <button class="btn btn-primary">Apply Now</button>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle navigation menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="mobile-overlay"></div>
+    </div>
+  </header>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="programmes.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>Programmes</span>
+    </a>
+    <a href="staff.html" class="bottom-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span>Staff</span>
+    </a>
+    <a href="events.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Events</span>
+    </a>
+    <a href="contact.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Contact</span>
+    </a>
+    <a href="book.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Book</span>
+    </a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1400&q=80')"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="container" style="position:relative;z-index:2">
+        <div class="page-hero-content">
+          <h1>Our Staff &amp; Faculty</h1>
+          <p>Meet the dedicated team driving academic excellence, groundbreaking research, and student success at TTU-CSD.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="margin-top:40px;margin-bottom:60px">
+
+      <!-- HOD -->
+      <div class="staff-section">
+        <div class="staff-section-label">Head of Department</div>
+        <div class="staff-hod-card reveal">
+          <div class="staff-hod-img">
+            <img alt="Dr. Michael Omari" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80">
+          </div>
+          <div class="staff-hod-info">
+            <h2>Dr. Michael Omari</h2>
+            <span class="staff-hod-title">Head of Department, Computer Science</span>
+            <p>Dr. Omari leads the department with over 20 years of experience in computer science education and research. His work in distributed systems and cloud computing has been published in over 60 peer-reviewed journals. He is passionate about bridging the gap between academia and industry, ensuring students graduate with both theoretical depth and practical skills.</p>
+            <div class="staff-hod-meta">
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> m.omari@ttu.edu.gh</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> Research Profile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Administrators -->
+      <div class="staff-section">
+        <div class="staff-section-label">Administrators</div>
+        <div class="staff-grid">
+          <div class="staff-card reveal">
+            <div class="staff-img-wrapper"><img alt="Madam Sylvia Ansah" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Madam Sylvia Ansah</h3>
+              <p class="staff-role-tag">Senior Administrator</p>
+              <p>Manages departmental operations, timetabling, and academic records with over 15 years of service at TTU.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:s.ansah@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+          <div class="staff-card reveal delay-1">
+            <div class="staff-img-wrapper"><img alt="Mr Samuel Seho" src="https://images.unsplash.com/photo-1621972659738-598cd8f7c37c?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Mr Samuel Seho</h3>
+              <p class="staff-role-tag">Admissions Officer</p>
+              <p>Oversees student admissions, scholarship coordination, and outreach programmes for prospective students.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:s.seho@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Senior Lecturers -->
+      <div class="staff-section">
+        <div class="staff-section-label">Senior Lecturers</div>
+        <div class="staff-grid">
+          <div class="staff-card reveal">
+            <div class="staff-img-wrapper"><img alt="Dr. Hillary Ackah" src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Dr. Hillary Ackah</h3>
+              <p class="staff-role-tag">Senior Lecturer, AI &amp; Ethics</p>
+              <p>Publishes influential papers on responsible AI deployment, algorithmic fairness, and machine learning transparency.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:h.ackah@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+          <div class="staff-card reveal delay-1">
+            <div class="staff-img-wrapper"><img alt="Mr Abeku French" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Mr Abeku French</h3>
+              <p class="staff-role-tag">Senior Lecturer, Systems &amp; Security</p>
+              <p>Specialises in cybersecurity, network architecture, and operating systems with 12 years of teaching experience.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:a.french@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+          <div class="staff-card reveal delay-2">
+            <div class="staff-img-wrapper"><img alt="Mr Richard Appiah" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Mr Richard Appiah</h3>
+              <p class="staff-role-tag">Senior Lecturer, Data Science</p>
+              <p>Specialises in big data analytics, statistical computing, and machine learning applications in industry.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:r.appiah@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+          <div class="staff-card reveal delay-3">
+            <div class="staff-img-wrapper"><img alt="Mr Papa Abaidoo" src="https://images.unsplash.com/photo-1645736593932-2c877741fd6c?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Mr Papa Abaidoo</h3>
+              <p class="staff-role-tag">Senior Lecturer, Software Engineering</p>
+              <p>Leads project-based courses in software design, testing, and agile methodologies with industry partnerships.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:p.abaidoo@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lecturers -->
+      <div class="staff-section">
+        <div class="staff-section-label">Lecturers</div>
+        <div class="staff-grid">
+          <div class="staff-card reveal">
+            <div class="staff-img-wrapper"><img alt="Dr. Esi Amankwah" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Dr. Esi Amankwah</h3>
+              <p class="staff-role-tag">Lecturer, Data Science</p>
+              <p>Teaches data visualisation, statistical computing, and machine learning fundamentals at undergraduate level.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:e.amankwah@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+          <div class="staff-card reveal delay-1">
+            <div class="staff-img-wrapper"><img alt="Dr. Kofi Adjei" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Dr. Kofi Adjei</h3>
+              <p class="staff-role-tag">Lecturer, Theoretical CS</p>
+              <p>Focuses on algorithms, complexity theory, formal methods and their applications in software verification.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:k.adjei@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+          <div class="staff-card reveal delay-2">
+            <div class="staff-img-wrapper"><img alt="Dr. Nana Yaw" src="https://images.unsplash.com/photo-1645736593932-2c877741fd6c?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Dr. Nana Yaw</h3>
+              <p class="staff-role-tag">Lecturer, Software Engineering</p>
+              <p>Leads project-based courses in software design, testing, and agile methodologies with industry partnerships.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:n.yaw@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teaching Assistants -->
+      <div class="staff-section">
+        <div class="staff-section-label">Teaching Assistants</div>
+        <div class="staff-grid">
+          <div class="staff-card ta-card reveal">
+            <div class="staff-img-wrapper"><img alt="Akosua Boadi" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Akosua Boadi</h3>
+              <p class="staff-role-tag">TA — Programming &amp; Algorithms</p>
+              <p>MSc student assisting with introductory programming, data structures, and algorithm tutorials.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:a.boadi@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+          <div class="staff-card ta-card reveal delay-1">
+            <div class="staff-img-wrapper"><img alt="Kwesi Appiah" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Kwesi Appiah</h3>
+              <p class="staff-role-tag">TA — Databases &amp; Systems</p>
+              <p>MSc student supporting database design, SQL labs, and introductory operating systems coursework.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:k.appiah@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+          <div class="staff-card ta-card reveal delay-2">
+            <div class="staff-img-wrapper"><img alt="Mawusi Dogbe" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80"></div>
+            <div class="staff-card-content">
+              <h3>Mawusi Dogbe</h3>
+              <p class="staff-role-tag">TA — Web &amp; Mobile Dev</p>
+              <p>MSc student assisting with web development, mobile app design, and user interface prototyping labs.</p>
+              <div class="staff-card-footer"><a class="staff-icon-link" href="mailto:m.dogbe@ttu.edu.gh"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Executives -->
+    <section class="staff-exec-section reveal">
+      <div class="container">
+        <div class="section-title-row"><h2>Department Executives</h2></div>
+        <p class="staff-exec-desc">The executive committee oversees departmental strategy, resource allocation, and academic planning.</p>
+        <div class="staff-exec-grid">
+          <div class="staff-exec-card">
+            <div class="staff-exec-img"><img alt="Dr. Michael Omari" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80"></div>
+            <h4>Dr. Michael Omari</h4>
+            <p>Chair — Head of Department</p>
+          </div>
+          <div class="staff-exec-card">
+            <div class="staff-exec-img"><img alt="Madam Sylvia Ansah" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80"></div>
+            <h4>Madam Sylvia Ansah</h4>
+            <p>Secretary — Senior Administrator</p>
+          </div>
+          <div class="staff-exec-card">
+            <div class="staff-exec-img"><img alt="Dr. Hillary Ackah" src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=300&q=80"></div>
+            <h4>Dr. Hillary Ackah</h4>
+            <p>Member — Research Lead</p>
+          </div>
+          <div class="staff-exec-card">
+            <div class="staff-exec-img"><img alt="Dr. Esi Amankwah" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=300&q=80"></div>
+            <h4>Dr. Esi Amankwah</h4>
+            <p>Member — Curriculum Coordinator</p>
+          </div>
+          <div class="staff-exec-card">
+            <div class="staff-exec-img"><img alt="Mr Samuel Seho" src="https://images.unsplash.com/photo-1621972659738-598cd8f7c37c?w=300&q=80"></div>
+            <h4>Mr Samuel Seho</h4>
+            <p>Member — Admissions Lead</p>
+          </div>
+          <div class="staff-exec-card">
+            <div class="staff-exec-img"><img alt="Ama Serwaa" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80"></div>
+            <h4>Ama Serwaa</h4>
+            <p>Member — Department Secretary</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand"><img src="images/logo.png" alt="TTU-CSD Logo" class="logo-img"/> TTU-CSD</div>
+        <p class="footer-desc">Empowering future leaders through academic excellence and rigorous research in computing and technology.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="staff.html">Staff Directory</a></li>
+          <li><a href="events.html">News &amp; Events</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Admissions</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Student Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            TTU Campus, Accra, Ghana
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            csd@ttu.edu.gh
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +233 302 500 600
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 TTU-CSD. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var l=document.getElementById('pageLoader');if(!l)return;l.classList.remove('active');document.addEventListener('click',function(e){var ln=e.target.closest('a');if(!ln)return;var h=ln.getAttribute('href');if(!h||h==='#'||h.startsWith('http')||h.startsWith('//'))return;e.preventDefault();l.classList.add('active');setTimeout(function(){window.location.href=h},600);})})();
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+  </script>
+</body>
+</html>

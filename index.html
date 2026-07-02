@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Department of Computer Science - TTU-CSD</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-ring">
+      <div class="loader-ring-inner"></div>
+    </div>
+    <div class="loader-code"></div>
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+    <p class="loader-label">Loading…</p>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a class="logo" href="index.html"><img src="images/logo.png" alt="TTU-CSD Logo" class="logo-img"/> TTU-CSD</a>
+      <div class="mobile-nav-wrapper">
+        <nav>
+          <ul class="nav-menu">
+            <li><a class="nav-link active" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="programmes.html">Programmes</a></li>
+            <li><a class="nav-link" href="staff.html">Staff</a></li>
+            <li><a class="nav-link" href="events.html">Events</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+            <li><a class="nav-link" href="book.html">Book Appointment</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <input class="search-input" placeholder="Search..." type="text"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <button class="btn btn-text">Enquire</button>
+        <button class="btn btn-primary">Apply Now</button>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle navigation menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="mobile-overlay"></div>
+    </div>
+  </header>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="programmes.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>Programmes</span>
+    </a>
+    <a href="staff.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span>Staff</span>
+    </a>
+    <a href="events.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Events</span>
+    </a>
+    <a href="contact.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Contact</span>
+    </a>
+    <a href="book.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Book</span>
+    </a>
+  </nav>
+
+  <main>
+    <section class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" data-slide="0" style="background-image:url('images/ttu-campus-building.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-tag slide-text">TTU-CSD</p>
+            <h1 class="hero-title slide-text">Department of Computer Science</h1>
+            <p class="hero-desc slide-text">We believe everyone should have the opportunity to create progress through rigorous research and comprehensive education.</p>
+            <div class="hero-actions slide-text">
+              <a href="programmes.html" class="btn btn-primary">
+                Find Courses
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="programmes.html" class="btn btn-outline-white">View Prospectus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" data-slide="1" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&q=80')">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-tag slide-text">Innovation</p>
+            <h1 class="hero-title slide-text">Cutting-Edge Research Labs</h1>
+            <p class="hero-desc slide-text">Our state-of-the-art facilities empower students and faculty to push the boundaries of computing and artificial intelligence.</p>
+            <div class="hero-actions slide-text">
+              <a href="programmes.html" class="btn btn-primary">
+                Explore Labs
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="programmes.html" class="btn btn-outline-white">Research Areas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" data-slide="2" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600&q=80')">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-tag slide-text">Community</p>
+            <h1 class="hero-title slide-text">5,000+ Students &amp; Alumni</h1>
+            <p class="hero-desc slide-text">Join a thriving community of innovators, thinkers, and leaders shaping the future of technology across the globe.</p>
+            <div class="hero-actions slide-text">
+              <a href="contact.html" class="btn btn-primary">
+                Join Us
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="contact.html" class="btn btn-outline-white">Alumni Network</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="slider-arrow slider-prev" aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="slider-arrow slider-next" aria-label="Next slide">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="slider-dots"></div>
+    </section>
+
+    <section class="floating-cards-section">
+      <div class="container">
+        <div class="floating-cards-container">
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-svg"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.89 12.5L12 15.8l6.11-3.3v3.8c0 1.2-2.73 2.2-6.11 2.2s-6.11-1-6.11-2.2v-3.8z"/></svg>
+            </div>
+            <div class="feature-card-content">
+              <h3>Graduation</h3>
+              <p>Recognized globally for academic rigor and successful alumni networks spanning every continent.</p>
+              <a class="feature-card-link" href="#">Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            </div>
+          </div>
+          <div class="feature-card reveal delay-1">
+            <div class="feature-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-svg"><path d="M4 10h3v7H4zm6.5 0h3v7h-3zM2 22h20v-2H2zm15-12h3v7h-3zm-9-7L2 7v2h20V7z"/></svg>
+            </div>
+            <div class="feature-card-content">
+              <h3>University Life</h3>
+              <p>A vibrant campus offering diverse cultural experiences, clubs, sports, and state-of-the-art facilities.</p>
+              <a class="feature-card-link" href="#">Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            </div>
+          </div>
+          <div class="feature-card reveal delay-2">
+            <div class="feature-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-svg"><path d="M21 5c-1.11-.9-2.45-1.5-3.82-1.5-1.35 0-2.68.6-3.82 1.5-1.14-.9-2.47-1.5-3.82-1.5-1.35 0-2.68.6-3.82 1.5H2v14h1.5c1.11.9 2.45 1.5 3.82 1.5 1.35 0 2.68-.6 3.82-1.5 1.14.9 2.47 1.5 3.82 1.5 1.35 0 2.68-.6 3.82-1.5H22V5h-1zm-9 12.5c-1.14-.9-2.47-1.5-3.82-1.5H4.5v-10H6c1.14 0 2.47.6 3.82 1.5v10zm8 0h-1.5c-1.35 0-2.68.6-3.82 1.5v-10c1.35-.9 2.68-1.5 3.82-1.5h1.5v10z"/></svg>
+            </div>
+            <div class="feature-card-content">
+              <h3>Education Services</h3>
+              <p>Comprehensive support for international and domestic students, including scholarships and career guidance.</p>
+              <a class="feature-card-link" href="#">Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <h3>5,000+</h3>
+            <p>Students Enrolled</p>
+          </div>
+          <div class="stat-item reveal delay-1">
+            <h3>98%</h3>
+            <p>Graduate Employment</p>
+          </div>
+          <div class="stat-item reveal delay-2">
+            <h3>40+</h3>
+            <p>Degree Programmes</p>
+          </div>
+          <div class="stat-item reveal delay-3">
+            <h3>50+</h3>
+            <p>Faculty Experts</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-title-row" style="border:none;margin-bottom:40px">
+          <h2>What Our Students Say</h2>
+          <div class="meta-text">Real stories from the TTU-CSD community</div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <p class="quote">"The CS programme here gave me hands-on experience with cutting-edge AI research. I graduated with a job offer from a top tech company."</p>
+            <div class="author">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Student">
+              <div class="author-info">
+                <h4>Sarah Mensah</h4>
+                <span>BSc Computer Science, 2024</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal delay-1">
+            <p class="quote">"The faculty mentorship I received was incredible. My research paper was published in a top-tier journal before I even graduated."</p>
+            <div class="author">
+              <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Student">
+              <div class="author-info">
+                <h4>David Osei</h4>
+                <span>MSc Data Analytics, 2023</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal delay-2">
+            <p class="quote">"From robotics clubs to hackathons, the campus culture pushed me to grow beyond the classroom. I made lifelong friends and connections."</p>
+            <div class="author">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Student">
+              <div class="author-info">
+                <h4>Ama Asante</h4>
+                <span>BSc Computer Science, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:80px 0;background:var(--surface-low)">
+      <div class="container">
+        <div class="section-title-row" style="border:none;margin-bottom:40px">
+          <h2>Latest News</h2>
+          <a class="read-more-link" href="events.html">
+            View All News
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="news-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+          <article class="reveal" style="background:var(--surface);border:1px solid var(--outline-variant);border-radius:8px;overflow:hidden">
+            <div style="height:180px;overflow:hidden">
+              <img alt="Renewable Energy" src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=500&q=80" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="padding:20px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--secondary-light);color:var(--secondary);font-size:0.7rem;font-weight:600;padding:3px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:0.05em">Research</span>
+                <span style="font-size:0.8rem;color:var(--on-surface-variant)">Oct 24, 2026</span>
+              </div>
+              <h3 style="font-size:1.1rem;margin-bottom:6px"><a href="events.html" style="color:inherit">Breakthrough in Renewable Energy Systems</a></h3>
+              <p style="font-size:0.85rem;color:var(--on-surface-variant);margin:0">Engineering team publishes findings that could significantly increase grid-scale battery efficiency.</p>
+            </div>
+          </article>
+          <article class="reveal delay-1" style="background:var(--surface);border:1px solid var(--outline-variant);border-radius:8px;overflow:hidden">
+            <div style="height:180px;overflow:hidden">
+              <img alt="Library" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=500&q=80" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="padding:20px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="color:var(--secondary);font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Campus Life</span>
+                <span style="font-size:0.8rem;color:var(--on-surface-variant)">Oct 20, 2026</span>
+              </div>
+              <h3 style="font-size:1.1rem;margin-bottom:6px"><a href="events.html" style="color:inherit">New Central Library Wing Opens</a></h3>
+              <p style="font-size:0.85rem;color:var(--on-surface-variant);margin:0">500 additional study spaces and state-of-the-art digital archiving facilities now available.</p>
+            </div>
+          </article>
+          <article class="reveal delay-2" style="background:var(--surface);border:1px solid var(--outline-variant);border-radius:8px;overflow:hidden">
+            <div style="height:180px;overflow:hidden">
+              <img alt="Robotics" src="https://images.unsplash.com/photo-1531746790095-e5cb1575d1d3?w=500&q=80" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="padding:20px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--secondary-light);color:var(--secondary);font-size:0.7rem;font-weight:600;padding:3px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:0.05em">Students</span>
+                <span style="font-size:0.8rem;color:var(--on-surface-variant)">Oct 12, 2026</span>
+              </div>
+              <h3 style="font-size:1.1rem;margin-bottom:6px"><a href="events.html" style="color:inherit">CS Team Wins International Robotics Competition</a></h3>
+              <p style="font-size:0.85rem;color:var(--on-surface-variant);margin:0">Undergraduate team takes first place at the Autonomous Systems Challenge in Singapore.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand"><img src="images/logo.png" alt="TTU-CSD Logo" class="logo-img"/> TTU-CSD</div>
+        <p class="footer-desc">Empowering future leaders through academic excellence and rigorous research in computing and technology.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="staff.html">Staff Directory</a></li>
+          <li><a href="events.html">News &amp; Events</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Admissions</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Student Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            TTU Campus, Accra, Ghana
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            csd@ttu.edu.gh
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +233 302 500 600
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 TTU-CSD. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Page transition loader
+    (function() {
+      var loader = document.getElementById('pageLoader');
+      if (!loader) return;
+      // Hide loader on load (in case it was shown from previous page)
+      loader.classList.remove('active');
+      // Intercept internal links
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        if (!href || href === '#' || href.startsWith('http') || href.startsWith('//')) return;
+        e.preventDefault();
+        loader.classList.add('active');
+        setTimeout(function() { window.location.href = href; }, 600);
+      });
+    })();
+
+    // Hero slider
+    (function() {
+      const slider = document.getElementById('heroSlider');
+      if (!slider) return;
+      const slides = slider.querySelectorAll('.hero-slide');
+      const dotsContainer = slider.querySelector('.slider-dots');
+      let current = 0;
+      let timer;
+      const total = slides.length;
+
+      // Create dots
+      for (let i = 0; i < total; i++) {
+        const btn = document.createElement('button');
+        btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        if (i === 0) btn.classList.add('active');
+        btn.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(btn);
+      }
+      const dots = dotsContainer.querySelectorAll('button');
+
+      function goTo(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        current = (index + total) % total;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+        resetTimer();
+      }
+
+      function next() { goTo(current + 1); }
+      function prev() { goTo(current - 1); }
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(next, 5000);
+      }
+
+      slider.querySelector('.slider-next').addEventListener('click', next);
+      slider.querySelector('.slider-prev').addEventListener('click', prev);
+      resetTimer();
+    })();
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Header scroll effect
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+  </script>
+</body>
+</html>
