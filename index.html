@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+  <!-- Full-screen loading overlay that appears briefly between page changes -->
   <div id="pageLoader" class="page-loader">
     <div class="loader-ring">
       <div class="loader-ring-inner"></div>
@@ -15,11 +16,14 @@
     <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
     <p class="loader-label">Loading…</p>
   </div>
+  <!-- Fixed top bar with the logo, nav links, search box, and action buttons -->
   <header class="site-header" id="siteHeader">
     <div class="container header-container">
+      <!-- TTU shield logo and department name — click to return to the homepage -->
       <a class="logo" href="index.html"><img src="images/logo.png" alt="TTU-CSD Logo" class="logo-img"/> TTU-CSD</a>
       <div class="mobile-nav-wrapper">
         <nav>
+          <!-- The row of page links across the top of the header -->
           <ul class="nav-menu">
             <li><a class="nav-link active" href="index.html">Home</a></li>
             <li><a class="nav-link" href="programmes.html">Programmes</a></li>
@@ -31,13 +35,17 @@
         </nav>
       </div>
       <div class="header-actions">
+        <!-- Search box with a magnifying glass icon for finding content on the site -->
         <div class="search-wrapper">
           <input class="search-input" placeholder="Search..." type="text"/>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </div>
+        <!-- Enquire button — opens a form for prospective students to ask questions -->
         <button class="btn btn-text">Enquire</button>
+        <!-- Apply Now button — the main call-to-action for student applications -->
         <button class="btn btn-primary">Apply Now</button>
       </div>
+      <!-- Hamburger menu button — three lines that open the navigation on mobile phones -->
       <button class="mobile-toggle" aria-label="Toggle navigation menu">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -45,6 +53,7 @@
     </div>
   </header>
 
+  <!-- App-style tab bar at the bottom of phone screens — hidden on desktop computers -->
   <nav class="bottom-nav">
     <a href="index.html" class="bottom-nav-item active">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -73,10 +82,13 @@
   </nav>
 
   <main>
+    <!-- Full-width image slideshow — 3 slides that crossfade every 5 seconds with arrows and dots -->
     <section class="hero-slider" id="heroSlider">
       <div class="hero-slide active" data-slide="0" style="background-image:url('images/ttu-campus-building.jpg')">
+        <!-- Dark tint over the background image to make the white text easy to read -->
         <div class="hero-overlay"></div>
         <div class="container">
+          <!-- The page heading and call-to-action buttons centred on the slide -->
           <div class="hero-content">
             <p class="hero-tag slide-text">TTU-CSD</p>
             <h1 class="hero-title slide-text">Department of Computer Science</h1>
@@ -134,8 +146,10 @@
       <div class="slider-dots"></div>
     </section>
 
+    <!-- Three feature cards that overlap the bottom of the hero — Graduation, Life, Education -->
     <section class="floating-cards-section">
       <div class="container">
+        <!-- White box holding the three feature cards side by side -->
         <div class="floating-cards-container">
           <div class="feature-card reveal">
             <div class="feature-icon-wrapper">
@@ -171,8 +185,10 @@
       </div>
     </section>
 
+    <!-- Dark navy banner showing big numbers: students, employment rate, programmes, faculty -->
     <section class="stats-section">
       <div class="container">
+        <!-- Four stat columns with big gold numbers and labels -->
         <div class="stats-grid">
           <div class="stat-item reveal">
             <h3>5,000+</h3>
@@ -194,12 +210,14 @@
       </div>
     </section>
 
+    <!-- Student testimonials — real quotes with photos, names, and graduation years -->
     <section class="testimonials-section">
       <div class="container">
         <div class="section-title-row" style="border:none;margin-bottom:40px">
           <h2>What Our Students Say</h2>
           <div class="meta-text">Real stories from the TTU-CSD community</div>
         </div>
+        <!-- Three testimonial cards side by side in a grid -->
         <div class="testimonials-grid">
           <div class="testimonial-card reveal">
             <p class="quote">"The CS programme here gave me hands-on experience with cutting-edge AI research. I graduated with a job offer from a top tech company."</p>
@@ -235,6 +253,7 @@
       </div>
     </section>
 
+    <!-- Latest news section — three article cards with images, tags, and summaries -->
     <section style="padding:80px 0;background:var(--surface-low)">
       <div class="container">
         <div class="section-title-row" style="border:none;margin-bottom:40px">
@@ -244,6 +263,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
+        <!-- Three-column grid of news article cards -->
         <div class="news-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
           <article class="reveal" style="background:var(--surface);border:1px solid var(--outline-variant);border-radius:8px;overflow:hidden">
             <div style="height:180px;overflow:hidden">
@@ -289,11 +309,14 @@
     </section>
   </main>
 
+  <!-- Page footer — dark section at the bottom with 4 columns of links and contact info -->
   <footer class="site-footer">
     <div class="container footer-grid">
+      <!-- Column 1 — Department brand: logo, description, and social media icons -->
       <div class="footer-brand-col">
         <div class="footer-brand"><img src="images/logo.png" alt="TTU-CSD Logo" class="logo-img"/> TTU-CSD</div>
         <p class="footer-desc">Empowering future leaders through academic excellence and rigorous research in computing and technology.</p>
+        <!-- Social media icon buttons — Facebook, Twitter, LinkedIn, and YouTube -->
         <div class="footer-social">
           <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
@@ -302,6 +325,7 @@
         </div>
       </div>
       <div class="footer-col">
+        <!-- Column 2 — Quick navigation links to the main pages of the website -->
         <h4>Quick Links</h4>
         <ul>
           <li><a href="programmes.html">Programmes</a></li>
@@ -311,6 +335,7 @@
         </ul>
       </div>
       <div class="footer-col">
+        <!-- Column 3 — Useful resources: Academic Calendar, Admissions, Research, Student Portal -->
         <h4>Resources</h4>
         <ul>
           <li><a href="#">Academic Calendar</a></li>
@@ -321,6 +346,7 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
+        <!-- Column 4 — Department contact details: address, email, and phone number -->
         <ul class="footer-contact-list">
           <li>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -337,6 +363,7 @@
         </ul>
       </div>
     </div>
+    <!-- Copyright bar — shows the year and "All rights reserved" notice -->
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; 2026 TTU-CSD. All rights reserved.</p>

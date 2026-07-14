@@ -31,6 +31,7 @@
   padding: 0;
 }
 
+/* Makes the page a flex column so the footer always pushes to the bottom */
 body {
   font-family: var(--font-sans);
   background: var(--background);
@@ -41,17 +42,20 @@ body {
   flex-direction: column;
 }
 
+/* Makes links match the text colour around them and fade smoothly */
 a {
   color: inherit;
   text-decoration: none;
   transition: color 0.3s, border-color 0.3s;
 }
 
+/* Makes buttons and form fields use the page font */
 button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
 }
 
+/* Makes all headings use a classic serif font in dark navy */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   color: var(--primary);
@@ -59,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+/* Stops images from breaking out of their container */
 img {
   max-width: 100%;
   display: block;
@@ -75,6 +80,7 @@ img {
 }
 
 @media (max-width: 768px) {
+  /* The invisible box that keeps content centred with a max width */
   .container {
     padding-left: 16px;
     padding-right: 16px;
@@ -170,6 +176,7 @@ img {
   display: block;
 }
 
+/* A small SVG icon used throughout the site, neatly aligned with text */
 .icon-svg {
   width: 24px;
   height: 24px;
@@ -190,10 +197,12 @@ img {
   transition: box-shadow 0.3s;
 }
 
+/* Adds a deeper shadow under the header after scrolling down */
 .site-header.scrolled {
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+/* Spreads out the logo, nav links, and action buttons across the header */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -201,6 +210,7 @@ img {
   height: 100%;
 }
 
+/* The TTU-CSD brand name and shield, links back to the homepage */
 .logo {
   display: flex;
   align-items: center;
@@ -212,10 +222,12 @@ img {
   transition: opacity 0.3s;
 }
 
+/* Gently fades the logo when you hover over it */
 .logo:hover {
   opacity: 0.8;
 }
 
+/* The row of page links in the desktop navigation bar */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -224,6 +236,7 @@ img {
   height: 100%;
 }
 
+/* A single navigation link in the top menu */
 .nav-link {
   color: var(--on-surface-variant);
   font-weight: 500;
@@ -234,6 +247,7 @@ img {
   position: relative;
 }
 
+/* The thin gold line that appears under a nav link on hover */
 .nav-link::after {
   content: '';
   position: absolute;
@@ -250,25 +264,30 @@ img {
   width: 100%;
 }
 
+/* Darkens the nav text colour when hovered */
 .nav-link:hover {
   color: var(--primary);
 }
 
+/* Bolds the current page link so you know where you are */
 .nav-link.active {
   color: var(--primary);
   font-weight: 600;
 }
 
+/* Groups the search box and action buttons on the right side */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
+/* Wraps the search input with a magnifying glass icon */
 .search-wrapper {
   position: relative;
 }
 
+/* The rounded search text box in the header */
 .search-input {
   background: var(--surface-low);
   border: 1px solid var(--outline-variant);
@@ -280,12 +299,14 @@ img {
   transition: border-color 0.3s, width 0.3s, box-shadow 0.3s;
 }
 
+/* Expands the search box and adds a blue glow when you click into it */
 .search-input:focus {
   border-color: var(--primary);
   width: 240px;
   box-shadow: 0 0 0 3px rgba(0,10,30,0.08);
 }
 
+/* Places the magnifying glass inside the search box */
 .search-wrapper .icon-svg {
   position: absolute;
   left: 12px;
@@ -294,6 +315,7 @@ img {
   color: var(--outline);
 }
 
+/* Base style for all buttons — rounded pill shape, smooth hover effect */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -308,55 +330,65 @@ img {
   border: none;
 }
 
+/* Slightly shrinks the button when clicked for a pressed-down feel */
 .btn:active {
   transform: scale(0.97);
 }
 
+/* The main dark-navy call-to-action button */
 .btn-primary {
   background: var(--primary);
   color: #fff;
 }
 
+/* Lightens the button and lifts it on hover */
 .btn-primary:hover {
   background: var(--primary-light);
   box-shadow: 0 4px 15px rgba(0,10,30,0.25);
   transform: translateY(-2px);
 }
 
+/* An outlined button with a gold border for less important actions */
 .btn-secondary {
   background: transparent;
   color: var(--primary);
   border: 1px solid var(--secondary);
 }
 
+/* Fills the outlined button with gold on hover */
 .btn-secondary:hover {
   background: var(--secondary);
   color: #fff;
   transform: translateY(-2px);
 }
 
+/* A white outlined button for use on dark backgrounds like the hero slider */
 .btn-outline-white {
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
 }
 
+/* Fills with white and changes text to navy on hover */
 .btn-outline-white:hover {
   background: #fff;
   color: var(--primary);
   transform: translateY(-2px);
 }
 
+/* A plain text button with no background — subtle and minimal */
 .btn-text {
   background: transparent;
   color: var(--primary);
   padding: 8px 16px;
 }
 
+/* Turns the text gold on hover */
 .btn-text:hover {
   color: var(--secondary);
 }
 
+/* The three-line hamburger menu icon on mobile screens */
 .mobile-toggle {
   display: none;
   background: none;
@@ -367,6 +399,7 @@ img {
   z-index: 60;
 }
 
+/* Fades the hamburger icon slightly on hover */
 .mobile-toggle:hover {
   opacity: 0.7;
 }
@@ -382,6 +415,7 @@ img {
   transition: opacity 0.3s ease;
 }
 
+/* Makes the backdrop fully visible when the menu slides open */
 .mobile-overlay.open {
   opacity: 1;
 }
@@ -407,6 +441,7 @@ img {
   box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
 }
 
+/* A single tab in the bottom bar — icon above, label below */
 .bottom-nav-item {
   display: flex;
   flex-direction: column;
@@ -421,6 +456,7 @@ img {
   min-width: 48px;
 }
 
+/* The icon image inside each bottom tab */
 .bottom-nav-item svg {
   width: 22px;
   height: 22px;
@@ -432,6 +468,7 @@ img {
   color: var(--primary);
 }
 
+/* Makes the active tab icon slightly thicker */
 .bottom-nav-item.active svg {
   stroke-width: 2.5;
 }
@@ -442,14 +479,17 @@ img {
     display: none;
   }
 
+  /* The three-line hamburger menu icon on mobile screens */
   .mobile-toggle {
     display: none;
   }
 
+  /* The dark transparent backdrop that appears behind the mobile menu */
   .mobile-overlay {
     display: none !important;
   }
 
+  /* The row of page links in the desktop navigation bar */
   .nav-menu {
     display: none;
   }
@@ -464,20 +504,24 @@ img {
     display: none;
   }
 
+  /* Groups the search box and action buttons on the right side */
   .header-actions {
     gap: 8px;
   }
 
+  /* Wraps the search input with a magnifying glass icon */
   .search-wrapper {
     width: 160px;
   }
 
+  /* The rounded search text box in the header */
   .search-input {
     width: 100%;
     font-size: 0.8rem;
     padding: 6px 12px 6px 34px;
   }
 
+  /* Places the magnifying glass inside the search box */
   .search-wrapper .icon-svg {
     width: 18px;
     height: 18px;
@@ -489,22 +533,27 @@ img {
     padding-bottom: 64px;
   }
 
+  /* The main content area — grows to fill any leftover space above the footer */
   main {
     padding-top: 60px;
   }
 
+  /* Spreads out the logo, nav links, and action buttons across the header */
   .header-container {
     height: 60px;
   }
 
+  /* The top bar that sticks to the top of the screen as you scroll */
   .site-header {
     height: 60px;
   }
 
+  /* The TTU-CSD brand name and shield, links back to the homepage */
   .logo {
     font-size: 1.15rem;
   }
 
+  /* The small TTU shield logo image in the header */
   .logo-img {
     height: 30px;
   }
@@ -526,11 +575,13 @@ img {
   transition: opacity 0.4s ease;
 }
 
+/* Shows the loading screen when changing pages */
 .page-loader.active {
   opacity: 1;
   pointer-events: auto;
 }
 
+/* The pulsing </> code symbol at the centre of the loading screen */
 .loader-code {
   font-family: 'Courier New', monospace;
   font-size: 2.8rem;
@@ -540,6 +591,7 @@ img {
   animation: loaderPulse 1.4s ease-in-out infinite;
 }
 
+/* Puts the </> characters inside the loader icon */
 .loader-code::before {
   content: '</>';
   display: block;
@@ -550,6 +602,7 @@ img {
   50% { opacity: 1; transform: scale(1.05); }
 }
 
+/* The outer ring that spins around the loading icon */
 .loader-ring {
   position: absolute;
   width: 120px;
@@ -561,6 +614,7 @@ img {
   animation: loaderSpin 1s linear infinite;
 }
 
+/* The inner ring spinning in the opposite direction for a cool effect */
 .loader-ring-inner {
   position: absolute;
   inset: 12px;
@@ -571,6 +625,7 @@ img {
   animation: loaderSpin 0.8s linear infinite reverse;
 }
 
+/* The grey track behind the loading progress bar */
 .loader-bar-track {
   width: 200px;
   height: 3px;
@@ -579,6 +634,7 @@ img {
   overflow: hidden;
 }
 
+/* The gold bar sliding back and forth to show something is happening */
 .loader-bar-fill {
   width: 40%;
   height: 100%;
@@ -587,6 +643,7 @@ img {
   animation: loaderBar 1.4s ease-in-out infinite;
 }
 
+/* The small "LOADING…" text below the spinner */
 .loader-label {
   color: rgba(255,255,255,0.7);
   font-size: 0.8rem;
@@ -605,6 +662,7 @@ img {
   100% { transform: translateX(300%); width: 30%; }
 }
 
+/* The main content area — grows to fill any leftover space above the footer */
 main {
   flex-grow: 1;
   padding-top: 80px;
@@ -617,6 +675,7 @@ main {
   overflow: hidden;
 }
 
+/* A thin gold decorative line at the bottom of the slider */
 .hero-slider::after {
   content: '';
   position: absolute;
@@ -628,6 +687,7 @@ main {
   z-index: 25;
 }
 
+/* A single slide in the hero — hidden until it becomes active */
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -641,12 +701,14 @@ main {
   z-index: 0;
 }
 
+/* The currently visible slide, shown at full brightness */
 .hero-slide.active {
   opacity: 1;
   transform: scale(1);
   z-index: 1;
 }
 
+/* A dark tint over the slide images so the white text is readable */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -654,6 +716,7 @@ main {
   z-index: 1;
 }
 
+/* Adds a subtle grid pattern over the hero for visual texture */
 .hero-overlay::before {
   content: '';
   position: absolute;
@@ -664,6 +727,7 @@ main {
   background-size: 60px 60px;
 }
 
+/* A large faint circle on the right side for decoration */
 .hero-overlay::after {
   content: '';
   position: absolute;
@@ -676,6 +740,7 @@ main {
   pointer-events: none;
 }
 
+/* The text heading and buttons centred inside each slide */
 .hero-content {
   position: relative;
   z-index: 10;
@@ -683,6 +748,7 @@ main {
   max-width: 768px;
 }
 
+/* The small gold label (e.g. "Innovation") above the main heading */
 .hero-tag {
   color: var(--secondary-light);
   font-size: 0.875rem;
@@ -692,12 +758,14 @@ main {
   margin-bottom: 16px;
 }
 
+/* The large white headline on each slide */
 .hero-title {
   font-size: 3.5rem;
   color: #fff;
   margin-bottom: 24px;
 }
 
+/* The paragraph of text below the headline */
 .hero-desc {
   font-size: 1.125rem;
   opacity: 0.9;
@@ -705,6 +773,7 @@ main {
   max-width: 600px;
 }
 
+/* The row of call-to-action buttons in each slide */
 .hero-actions {
   display: flex;
   gap: 16px;
@@ -717,14 +786,19 @@ main {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Makes the text visible when its slide becomes active */
 .hero-slide.active .slide-text {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Reveals the first line after a tiny delay */
 .hero-slide.active .slide-text:nth-child(1) { transition-delay: 0.15s; }
+/* Reveals the second line slightly later */
 .hero-slide.active .slide-text:nth-child(2) { transition-delay: 0.3s; }
+/* Reveals the third line after that */
 .hero-slide.active .slide-text:nth-child(3) { transition-delay: 0.45s; }
+/* Reveals the buttons last for a staggered effect */
 .hero-slide.active .slide-text:nth-child(4) { transition-delay: 0.6s; }
 
 /* Arrows */
@@ -748,22 +822,27 @@ main {
   opacity: 0;
 }
 
+/* Only shows the arrows when you hover over the slider */
 .hero-slider:hover .slider-arrow {
   opacity: 1;
 }
 
+/* Turns the arrow background dark navy and makes it larger on hover */
 .slider-arrow:hover {
   background: var(--primary);
   border-color: var(--primary);
   transform: translateY(-50%) scale(1.1);
 }
 
+/* Sizes the chevron icon inside each arrow button */
 .slider-arrow svg {
   width: 22px;
   height: 22px;
 }
 
+/* Puts the left arrow near the left edge of the slider */
 .slider-prev { left: 24px; }
+/* Puts the right arrow near the right edge of the slider */
 .slider-next { right: 24px; }
 
 /* Dots */
@@ -777,6 +856,7 @@ main {
   gap: 10px;
 }
 
+/* A single dot — an empty circle for inactive slides */
 .slider-dots button {
   width: 12px;
   height: 12px;
@@ -788,35 +868,44 @@ main {
   padding: 0;
 }
 
+/* Fills the current slide dot with solid white and makes it bigger */
 .slider-dots button.active {
   background: #fff;
   border-color: #fff;
   transform: scale(1.25);
 }
 
+/* Grows the dot slightly when you hover over it */
 .slider-dots button:hover {
   border-color: #fff;
   transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
+  /* The big full-width image slideshow at the top of the homepage */
   .hero-slider {
     height: 420px;
   }
+  /* The large white headline on each slide */
   .hero-title {
     font-size: 2.25rem;
   }
+  /* The row of call-to-action buttons in each slide */
   .hero-actions {
     flex-direction: column;
     gap: 12px;
   }
+  /* The round left and right arrow buttons on the slider */
   .slider-arrow {
     width: 36px;
     height: 36px;
     opacity: 0.6;
   }
+  /* Puts the left arrow near the left edge of the slider */
   .slider-prev { left: 12px; }
+  /* Puts the right arrow near the right edge of the slider */
   .slider-next { right: 12px; }
+  /* The row of tiny dots at the bottom showing which slide you are on */
   .slider-dots { bottom: 16px; }
 }
 
@@ -828,6 +917,7 @@ main {
   margin-bottom: 80px;
 }
 
+/* A white box holding the three feature cards side by side */
 .floating-cards-container {
   background: var(--surface);
   border-radius: var(--radius-lg);
@@ -839,21 +929,25 @@ main {
   gap: 32px;
 }
 
+/* A single feature card with an icon, title, and description */
 .feature-card {
   display: flex;
   gap: 16px;
   transition: transform 0.3s;
 }
 
+/* Lifts the card slightly on hover for depth */
 .feature-card:hover {
   transform: translateY(-4px);
 }
 
+/* Adds a vertical divider line between the three feature cards */
 .feature-card:not(:first-child) {
   border-left: 1px solid var(--outline-variant);
   padding-left: 32px;
 }
 
+/* The gold circle holding each feature icon */
 .feature-icon-wrapper {
   width: 48px;
   height: 48px;
@@ -867,11 +961,13 @@ main {
   transition: transform 0.3s, background 0.3s;
 }
 
+/* Enlarges and slightly rotates the icon circle on hover */
 .feature-card:hover .feature-icon-wrapper {
   transform: scale(1.1) rotate(-5deg);
   background: #e8d87a;
 }
 
+/* The title inside a feature card */
 .feature-card-content h3 {
   font-family: var(--font-sans);
   font-size: 0.875rem;
@@ -879,12 +975,14 @@ main {
   margin-bottom: 8px;
 }
 
+/* The description text inside a feature card */
 .feature-card-content p {
   font-size: 0.875rem;
   color: var(--on-surface-variant);
   margin-bottom: 12px;
 }
 
+/* The "Learn More" link with a right-pointing arrow */
 .feature-card-link {
   font-size: 0.875rem;
   font-weight: 600;
@@ -895,17 +993,21 @@ main {
   transition: gap 0.3s;
 }
 
+/* Slides the arrow further to the right on hover */
 .feature-card-link:hover {
   color: var(--secondary);
   gap: 8px;
 }
 
 @media (max-width: 992px) {
+  /* The three feature cards that sit just below the hero slider */
   .floating-cards-section { margin-top: 0; margin-bottom: 50px; }
+  /* A white box holding the three feature cards side by side */
   .floating-cards-container {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+  /* Adds a vertical divider line between the three feature cards */
   .feature-card:not(:first-child) {
     border-left: none;
     padding-left: 0;
@@ -921,6 +1023,7 @@ main {
   color: #fff;
 }
 
+/* A four-column grid holding the stat numbers */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -928,6 +1031,7 @@ main {
   text-align: center;
 }
 
+/* The big gold number in each stat column */
 .stat-item h3 {
   font-size: 2.8rem;
   color: var(--secondary-light);
@@ -936,18 +1040,21 @@ main {
   margin-bottom: 4px;
 }
 
+/* The label below each big number */
 .stat-item p {
   color: rgba(255,255,255,0.75);
   font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
+  /* A four-column grid holding the stat numbers */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
+  /* A four-column grid holding the stat numbers */
   .stats-grid {
     grid-template-columns: 1fr;
   }
@@ -958,12 +1065,14 @@ main {
   padding: 80px 0;
 }
 
+/* A three-column grid of testimonial cards */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
+/* A single white card with a student quote and photo */
 .testimonial-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -972,11 +1081,13 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Lifts the card and adds a shadow on hover */
 .testimonial-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
+/* The student quote text in italics */
 .testimonial-card .quote {
   color: var(--on-surface-variant);
   font-style: italic;
@@ -984,12 +1095,14 @@ main {
   font-size: 0.92rem;
 }
 
+/* The row with the student photo, name, and graduation year */
 .testimonial-card .author {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
+/* The round student profile photo */
 .testimonial-card .author img {
   width: 44px;
   height: 44px;
@@ -997,17 +1110,20 @@ main {
   object-fit: cover;
 }
 
+/* The student name below their photo */
 .testimonial-card .author-info h4 {
   font-size: 0.95rem;
   font-family: var(--font-sans);
 }
 
+/* The programme and graduation year below the name */
 .testimonial-card .author-info span {
   font-size: 0.82rem;
   color: var(--on-surface-variant);
 }
 
 @media (max-width: 768px) {
+  /* A three-column grid of testimonial cards */
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
@@ -1020,11 +1136,13 @@ main {
   border-bottom: 1px solid var(--outline-variant);
 }
 
+/* The large page title in the banner */
 .page-header h1 {
   font-size: 3rem;
   margin-bottom: 8px;
 }
 
+/* The subtitle text below the page title */
 .page-header p {
   font-size: 1.125rem;
   color: var(--on-surface-variant);
@@ -1032,9 +1150,11 @@ main {
 }
 
 @media (max-width: 768px) {
+  /* A tall banner at the top of interior pages for the page title */
   .page-header {
     padding: 48px 0;
   }
+  /* The large page title in the banner */
   .page-header h1 {
     font-size: 2rem;
   }
@@ -1057,6 +1177,7 @@ main {
   overflow: hidden;
 }
 
+/* The background photo that fills the hero banner */
 .page-hero-bg {
   position: absolute;
   inset: 0;
@@ -1066,10 +1187,12 @@ main {
   transition: transform 7s ease;
 }
 
+/* Gently zooms the background photo on hover */
 .page-hero:hover .page-hero-bg {
   transform: scale(1);
 }
 
+/* A dark gradient over the photo so the white text stands out */
 .page-hero-overlay {
   position: absolute;
   inset: 0;
@@ -1120,6 +1243,7 @@ main {
   color: #fff;
 }
 
+/* The white page title inside the hero banner */
 .page-hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 14px;
@@ -1140,6 +1264,7 @@ main {
   background: var(--secondary-light);
 }
 
+/* The description text below the page title */
 .page-hero-content p {
   font-size: 1.05rem;
   opacity: 0.88;
@@ -1148,16 +1273,19 @@ main {
   margin-bottom: 0;
 }
 
+/* A row of quick stat numbers on the programmes page */
 .prog-stats-row {
   display: flex;
   gap: 32px;
 }
 
+/* A single statistic with a gold number and a label */
 .prog-stat {
   font-size: 0.85rem;
   opacity: 0.8;
 }
 
+/* The gold number in a stat item */
 .prog-stat strong {
   font-size: 1.25rem;
   color: var(--secondary-light);
@@ -1165,6 +1293,7 @@ main {
   margin-bottom: 2px;
 }
 
+/* The filter bar with All, Undergraduate, Postgraduate, and PhD buttons */
 .prog-tabs {
   display: flex;
   gap: 4px;
@@ -1177,6 +1306,7 @@ main {
   margin-bottom: 40px;
 }
 
+/* A single filter tab button */
 .prog-tab {
   padding: 10px 24px;
   border: none;
@@ -1189,16 +1319,19 @@ main {
   color: var(--on-surface-variant);
 }
 
+/* Highlights the tab with a pale background on hover */
 .prog-tab:hover {
   color: var(--primary);
   background: rgba(0,10,30,0.04);
 }
 
+/* Fills the selected tab button with dark navy */
 .prog-tab.active {
   background: var(--primary);
   color: #fff;
 }
 
+/* The grid of programme cards on the programmes page */
 .prog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1206,6 +1339,7 @@ main {
   margin-bottom: 80px;
 }
 
+/* A single white card for one academic programme */
 .prog-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -1214,11 +1348,13 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Lifts the card and adds a shadow on hover */
 .prog-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 28px rgba(0,10,30,0.1);
 }
 
+/* The top row showing the degree badge and duration */
 .prog-card-top {
   display: flex;
   align-items: center;
@@ -1226,6 +1362,7 @@ main {
   margin-bottom: 14px;
 }
 
+/* The gold badge showing the degree type (BSc, MSc, etc.) */
 .prog-badge {
   background: var(--secondary-light);
   color: var(--secondary);
@@ -1237,11 +1374,13 @@ main {
   letter-spacing: 0.05em;
 }
 
+/* A dark-blue badge for postgraduate programmes */
 .prog-badge-alt {
   background: var(--primary-light);
   color: #a8c8ff;
 }
 
+/* The small text showing how many years the programme takes */
 .prog-duration {
   font-size: 0.8rem;
   color: var(--on-surface-variant);
@@ -1250,11 +1389,13 @@ main {
   gap: 4px;
 }
 
+/* The programme title inside the card */
 .prog-card h3 {
   font-size: 1.15rem;
   margin-bottom: 10px;
 }
 
+/* The programme description inside the card */
 .prog-card p {
   font-size: 0.85rem;
   color: var(--on-surface-variant);
@@ -1262,6 +1403,7 @@ main {
   line-height: 1.55;
 }
 
+/* The row of small tag chips below the description */
 .prog-chips {
   display: flex;
   flex-wrap: wrap;
@@ -1269,6 +1411,7 @@ main {
   margin-bottom: 18px;
 }
 
+/* A single small tag chip (e.g. "360 Credits") */
 .prog-chip {
   font-size: 0.7rem;
   background: var(--surface-low);
@@ -1278,12 +1421,14 @@ main {
   border: 1px solid var(--outline-variant);
 }
 
+/* The "View Details" link at the bottom of a programme card */
 .prog-link {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--primary);
 }
 
+/* Underlines the view-details link on hover */
 .prog-link:hover {
   text-decoration: underline;
 }
@@ -1294,12 +1439,14 @@ main {
   background: var(--surface-low);
 }
 
+/* A four-column grid of benefit cards */
 .prog-why-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
+/* A single white benefit card with icon, title, and description */
 .prog-why-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -1308,6 +1455,7 @@ main {
   text-align: center;
 }
 
+/* The dark-navy square containing the benefit icon */
 .prog-why-icon {
   width: 48px;
   height: 48px;
@@ -1320,16 +1468,19 @@ main {
   justify-content: center;
 }
 
+/* The icon inside each benefit card */
 .prog-why-icon svg {
   width: 24px;
   height: 24px;
 }
 
+/* The heading inside a benefit card */
 .prog-why-card h3 {
   font-size: 1rem;
   margin-bottom: 8px;
 }
 
+/* The description text inside a benefit card */
 .prog-why-card p {
   font-size: 0.8rem;
   color: var(--on-surface-variant);
@@ -1341,6 +1492,7 @@ main {
   padding: 80px 0;
 }
 
+/* The stacked list of question-and-answer items */
 .prog-faq-list {
   max-width: 800px;
   margin: 0 auto;
@@ -1349,12 +1501,14 @@ main {
   gap: 8px;
 }
 
+/* A single question with a hidden answer below it */
 .prog-faq-item {
   border: 1px solid var(--outline-variant);
   border-radius: 10px;
   overflow: hidden;
 }
 
+/* The clickable question button that reveals the answer when clicked */
 .prog-faq-q {
   width: 100%;
   display: flex;
@@ -1371,10 +1525,12 @@ main {
   transition: background 0.3s;
 }
 
+/* Lightens the question background on hover */
 .prog-faq-q:hover {
   background: var(--surface-low);
 }
 
+/* The small down-arrow that flips up when the answer is open */
 .faq-chevron {
   width: 18px;
   height: 18px;
@@ -1382,10 +1538,12 @@ main {
   flex-shrink: 0;
 }
 
+/* Rotates the chevron arrow to point up */
 .prog-faq-item.open .faq-chevron {
   transform: rotate(180deg);
 }
 
+/* The answer text that appears below each question */
 .prog-faq-a {
   max-height: 0;
   overflow: hidden;
@@ -1409,11 +1567,13 @@ main {
   text-align: center;
 }
 
+/* The white heading in the CTA banner */
 .prog-cta h2 {
   font-size: 2rem;
   margin-bottom: 12px;
 }
 
+/* The subtitle text in the CTA banner */
 .prog-cta p {
   opacity: 0.8;
   margin-bottom: 32px;
@@ -1422,6 +1582,7 @@ main {
   margin-right: auto;
 }
 
+/* The row of buttons inside the CTA banner */
 .prog-cta-actions {
   display: flex;
   gap: 16px;
@@ -1429,19 +1590,30 @@ main {
 }
 
 @media (max-width: 900px) {
+  /* The grid of programme cards on the programmes page */
   .prog-grid { grid-template-columns: repeat(2, 1fr); }
+  /* A four-column grid of benefit cards */
   .prog-why-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
+  /* The large banner image at the top of every interior page */
   .page-hero { height: 260px; }
+  /* The white page title inside the hero banner */
   .page-hero-content h1 { font-size: 1.8rem; }
+  /* The description text below the page title */
   .page-hero-content p { font-size: 0.9rem; margin-top: 14px; }
+  /* A row of quick stat numbers on the programmes page */
   .prog-stats-row { gap: 16px; flex-wrap: wrap; }
+  /* The filter bar with All, Undergraduate, Postgraduate, and PhD buttons */
   .prog-tabs { width: 100%; overflow-x: auto; }
+  /* The grid of programme cards on the programmes page */
   .prog-grid { grid-template-columns: 1fr; }
+  /* A four-column grid of benefit cards */
   .prog-why-grid { grid-template-columns: 1fr; }
+  /* The white heading in the CTA banner */
   .prog-cta h2 { font-size: 1.5rem; }
+  /* The row of buttons inside the CTA banner */
   .prog-cta-actions { flex-direction: column; align-items: center; }
 }
 
@@ -1450,28 +1622,46 @@ main {
 }
 
 @media (max-width: 480px) {
+  /* The large banner image at the top of every interior page */
   .page-hero { height: 200px; }
+  /* The white page title inside the hero banner */
   .page-hero-content h1 { font-size: 1.4rem; }
+  /* The description text below the page title */
   .page-hero-content p { font-size: 0.8rem; margin-top: 10px; }
+  /* The big full-width image slideshow at the top of the homepage */
   .hero-slider { height: 300px; }
   .hero-slider .hero-content { padding: 20px 0; }
+  /* The large white headline on each slide */
   .hero-title { font-size: 1.5rem; margin-bottom: 10px; }
+  /* The paragraph of text below the headline */
   .hero-desc { font-size: 0.85rem; margin-bottom: 16px; }
+  /* The small gold label (e.g. "Innovation") above the main heading */
   .hero-tag { font-size: 0.7rem; margin-bottom: 8px; }
+  /* The round left and right arrow buttons on the slider */
   .slider-arrow { width: 28px; height: 28px; opacity: 0.6; }
+  /* Sizes the chevron icon inside each arrow button */
   .slider-arrow svg { width: 14px; height: 14px; }
+  /* Puts the left arrow near the left edge of the slider */
   .slider-prev { left: 10px; }
+  /* Puts the right arrow near the right edge of the slider */
   .slider-next { right: 10px; }
+  /* The row of tiny dots at the bottom showing which slide you are on */
   .slider-dots { bottom: 16px; gap: 6px; }
+  /* A single dot — an empty circle for inactive slides */
   .slider-dots button { width: 8px; height: 8px; }
+  /* The three feature cards that sit just below the hero slider */
   .floating-cards-section { margin-top: 0; margin-bottom: 40px; }
+  /* A white box holding the three feature cards side by side */
   .floating-cards-container { padding: 20px; }
   .news-grid { grid-template-columns: 1fr !important; }
   .header-actions .search-wrapper { width: 110px; }
+  /* The rounded search text box in the header */
   .search-input { font-size: 0.7rem; padding: 4px 8px 4px 24px; }
+  /* Places the magnifying glass inside the search box */
   .search-wrapper .icon-svg { width: 12px; height: 12px; left: 6px; }
 }
 
+/* The sidebar column that sits beside main content on interior pages */
 .sidebar {
   width: 25%;
   display: flex;
@@ -1480,19 +1670,23 @@ main {
   flex-shrink: 0;
 }
 
+/* The wider main content column in the two-column layout */
 .main-content-area {
   width: 75%;
 }
 
 @media (max-width: 992px) {
+  /* A two-column layout with a main area and a narrower sidebar */
   .layout-with-sidebar {
     flex-direction: column;
   }
+  /* The sidebar column that sits beside main content on interior pages */
   .sidebar, .main-content-area {
     width: 100%;
   }
 }
 
+/* A single white card-like box inside the sidebar */
 .sidebar-widget {
   background: var(--surface-lowest);
   border: 1px solid var(--outline-variant);
@@ -1501,10 +1695,12 @@ main {
   transition: box-shadow 0.3s;
 }
 
+/* Adds a faint shadow to the sidebar card on hover */
 .sidebar-widget:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+/* The heading inside a sidebar widget */
 .sidebar-widget h3 {
   font-size: 1.5rem;
   margin-bottom: 16px;
@@ -1513,16 +1709,19 @@ main {
   gap: 8px;
 }
 
+/* Colours the icon next to the sidebar heading in gold */
 .sidebar-widget h3 .icon-svg {
   color: var(--secondary);
 }
 
+/* The text content inside a sidebar widget */
 .sidebar-widget p {
   color: var(--on-surface-variant);
   margin-bottom: 16px;
   font-size: 0.95rem;
 }
 
+/* A link inside the sidebar with a right-pointing arrow */
 .sidebar-widget-link {
   font-weight: 600;
   color: var(--primary);
@@ -1532,11 +1731,13 @@ main {
   transition: gap 0.3s;
 }
 
+/* Moves the arrow to the right on hover */
 .sidebar-widget-link:hover {
   color: var(--secondary);
   gap: 8px;
 }
 
+/* A list of items inside the sidebar, without bullet points */
 .sidebar-list {
   list-style: none;
   margin-bottom: 16px;
@@ -1545,11 +1746,13 @@ main {
   gap: 8px;
 }
 
+/* A single item in the sidebar list */
 .sidebar-list li {
   color: var(--on-surface-variant);
   font-size: 0.95rem;
 }
 
+/* Highlights the bold label part of a list item in gold */
 .sidebar-list li span {
   color: var(--secondary);
   font-weight: bold;
@@ -1566,21 +1769,25 @@ main {
   margin-bottom: 32px;
 }
 
+/* The section heading text */
 .section-title-row h2 {
   font-size: 2.25rem;
 }
 
+/* The small subtitle or extra info beside the heading */
 .section-title-row .meta-text {
   color: var(--on-surface-variant);
   font-size: 0.875rem;
 }
 
+/* A magazine-style grid of differently-sized cards */
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 
+/* A single card in the bento grid */
 .bento-item {
   background: var(--surface-lowest);
   border: 1px solid var(--outline-variant);
@@ -1591,11 +1798,13 @@ main {
   transition: transform 0.4s, box-shadow 0.4s;
 }
 
+/* Lifts the card and adds a shadow on hover */
 .bento-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 35px rgba(0,10,30,0.1);
 }
 
+/* The top row of each bento card with badge and duration */
 .bento-item-header {
   display: flex;
   justify-content: space-between;
@@ -1605,6 +1814,7 @@ main {
   flex-wrap: wrap;
 }
 
+/* A small label tag showing a degree level */
 .badge {
   background: var(--surface-low);
   color: var(--primary);
@@ -1614,11 +1824,13 @@ main {
   border-radius: var(--radius-sm);
 }
 
+/* An alternative darker badge colour */
 .badge-alt {
   background: var(--primary);
   color: #fff;
 }
 
+/* Small text showing how long a course or programme takes */
 .duration-info {
   color: var(--outline);
   font-size: 0.875rem;
@@ -1627,23 +1839,27 @@ main {
   gap: 4px;
 }
 
+/* The heading inside a bento grid card */
 .bento-item h3 {
   font-size: 1.5rem;
   margin-bottom: 8px;
 }
 
+/* The description inside a bento grid card */
 .bento-item p {
   color: var(--on-surface-variant);
   margin-bottom: 24px;
   flex-grow: 1;
 }
 
+/* The bottom area of a bento card with a link */
 .bento-item-footer {
   border-top: 1px solid var(--surface-low);
   padding-top: 16px;
   margin-top: auto;
 }
 
+/* The link at the bottom of a bento card */
 .bento-item-link {
   font-weight: 600;
   color: var(--primary);
@@ -1653,14 +1869,17 @@ main {
   transition: color 0.3s;
 }
 
+/* Changes the link colour to gold on hover */
 .bento-item-link:hover {
   color: var(--secondary);
 }
 
+/* The arrow icon inside the bento card link */
 .bento-item-link .icon-svg {
   transition: transform 0.3s;
 }
 
+/* Slides the arrow to the right on hover */
 .bento-item-link:hover .icon-svg {
   transform: translateX(4px);
 }
@@ -1678,6 +1897,7 @@ main {
   align-items: center;
 }
 
+/* The background photo in the page banner */
 .page-banner-img {
   position: absolute;
   inset: 0;
@@ -1691,10 +1911,12 @@ main {
   transition: transform 6s ease;
 }
 
+/* Gently zooms the banner photo on hover */
 .page-banner:hover .page-banner-img {
   transform: scale(1.08);
 }
 
+/* The text and buttons inside the page banner */
 .page-banner-content {
   position: relative;
   z-index: 10;
@@ -1702,29 +1924,35 @@ main {
   max-width: 768px;
 }
 
+/* The main heading inside the banner */
 .page-banner-content h1 {
   font-size: 2.5rem;
   margin-bottom: 16px;
 }
 
+/* The subtitle text inside the banner */
 .page-banner-content p {
   font-size: 1.125rem;
   color: var(--on-surface-variant);
   margin-bottom: 24px;
 }
 
+/* The row of buttons inside the banner */
 .page-banner-actions {
   display: flex;
   gap: 16px;
 }
 
 @media (max-width: 768px) {
+  /* A tall banner with a faded background image and text */
   .page-banner {
     height: auto;
   }
+  /* The text and buttons inside the page banner */
   .page-banner-content {
     padding: 24px;
   }
+  /* The main heading inside the banner */
   .page-banner-content h1 {
     font-size: 1.75rem;
   }
@@ -1735,10 +1963,12 @@ main {
   margin-bottom: 48px;
 }
 
+/* Removes extra space after the last staff group on the page */
 .staff-section:last-child {
   margin-bottom: 0;
 }
 
+/* The small uppercase heading above each group of staff */
 .staff-section-label {
   font-size: 0.75rem;
   font-weight: 600;
@@ -1763,6 +1993,7 @@ main {
   box-shadow: 0 4px 20px rgba(0,10,30,0.06);
 }
 
+/* The square photo area in the HOD card */
 .staff-hod-img {
   width: 100%;
   aspect-ratio: 1;
@@ -1770,23 +2001,27 @@ main {
   overflow: hidden;
 }
 
+/* The HOD profile photo inside the square */
 .staff-hod-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* The text column beside the HOD photo */
 .staff-hod-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/* The Head of Department name */
 .staff-hod-info h2 {
   font-size: 1.8rem;
   margin-bottom: 4px;
 }
 
+/* The gold job title below the HOD name */
 .staff-hod-title {
   font-size: 0.85rem;
   color: var(--secondary);
@@ -1795,6 +2030,7 @@ main {
   display: block;
 }
 
+/* The HOD biography text */
 .staff-hod-info p {
   font-size: 0.9rem;
   color: var(--on-surface-variant);
@@ -1802,11 +2038,13 @@ main {
   margin-bottom: 20px;
 }
 
+/* The row with email and research links at the bottom of the HOD card */
 .staff-hod-meta {
   display: flex;
   gap: 24px;
 }
 
+/* A single item in the HOD meta row with its own icon */
 .staff-hod-meta span {
   display: flex;
   align-items: center;
@@ -1815,6 +2053,7 @@ main {
   color: var(--on-surface-variant);
 }
 
+/* The small icon beside each HOD contact detail */
 .staff-hod-meta span svg {
   width: 16px;
   height: 16px;
@@ -1828,10 +2067,12 @@ main {
   gap: 20px;
 }
 
+/* A narrower single-column version of the staff grid */
 .staff-grid-1col {
   grid-template-columns: minmax(240px, 400px);
 }
 
+/* A single white card with a staff photo, name, and details */
 .staff-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -1842,11 +2083,13 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Lifts the card and adds a shadow on hover */
 .staff-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 28px rgba(0,10,30,0.08);
 }
 
+/* The square photo area at the top of each staff card */
 .staff-img-wrapper {
   width: 100%;
   aspect-ratio: 1;
@@ -1854,6 +2097,7 @@ main {
   overflow: hidden;
 }
 
+/* The staff photo that fills the square */
 .staff-img-wrapper img {
   width: 100%;
   height: 100%;
@@ -1861,10 +2105,12 @@ main {
   transition: transform 0.4s;
 }
 
+/* Gently zooms into the staff photo on hover */
 .staff-card:hover .staff-img-wrapper img {
   transform: scale(1.06);
 }
 
+/* The text area below the photo with name, role, and bio */
 .staff-card-content {
   padding: 20px;
   display: flex;
@@ -1872,11 +2118,13 @@ main {
   flex-grow: 1;
 }
 
+/* The staff member name */
 .staff-card-content h3 {
   font-size: 1.15rem;
   margin-bottom: 2px;
 }
 
+/* The gold job title below the name */
 .staff-role-tag {
   font-size: 0.78rem;
   font-weight: 500;
@@ -1884,6 +2132,7 @@ main {
   margin-bottom: 10px;
 }
 
+/* The short bio or description */
 .staff-card-content p {
   font-size: 0.82rem;
   color: var(--on-surface-variant);
@@ -1892,6 +2141,7 @@ main {
   margin-bottom: 16px;
 }
 
+/* The bottom row of the card with email and contact icons */
 .staff-card-footer {
   border-top: 1px solid var(--outline-variant);
   padding-top: 12px;
@@ -1899,17 +2149,20 @@ main {
   gap: 10px;
 }
 
+/* A small circular icon button in the staff card footer */
 .staff-icon-link {
   color: var(--on-surface-variant);
   transition: color 0.3s, transform 0.3s;
   display: inline-flex;
 }
 
+/* The icon inside the staff footer link */
 .staff-icon-link svg {
   width: 20px;
   height: 20px;
 }
 
+/* Enlarges the icon and turns it dark navy on hover */
 .staff-icon-link:hover {
   color: var(--primary);
   transform: scale(1.15);
@@ -1920,6 +2173,7 @@ main {
   border-style: dashed;
 }
 
+/* A lighter blue colour for the Teaching Assistant job title */
 .ta-card .staff-role-tag {
   color: var(--primary-light);
 }
@@ -1930,6 +2184,7 @@ main {
   background: var(--surface-low);
 }
 
+/* The description above the executive members grid */
 .staff-exec-desc {
   text-align: center;
   color: var(--on-surface-variant);
@@ -1937,12 +2192,14 @@ main {
   font-size: 0.95rem;
 }
 
+/* The grid of round executive member cards */
 .staff-exec-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
 }
 
+/* A single executive member card with a circular photo */
 .staff-exec-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -1952,11 +2209,13 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Lifts the executive card on hover */
 .staff-exec-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0,10,30,0.08);
 }
 
+/* The round profile photo of an executive member */
 .staff-exec-img {
   width: 80px;
   height: 80px;
@@ -1966,17 +2225,20 @@ main {
   border: 3px solid var(--outline-variant);
 }
 
+/* The executive member photo inside the circle */
 .staff-exec-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* The executive member name */
 .staff-exec-card h4 {
   font-size: 0.9rem;
   margin-bottom: 2px;
 }
 
+/* The executive member role */
 .staff-exec-card p {
   font-size: 0.75rem;
   color: var(--on-surface-variant);
@@ -1984,10 +2246,15 @@ main {
 
 @media (max-width: 768px) {
 
+  /* The large featured card for the Head of Department with a big photo */
   .staff-hod-card { grid-template-columns: 1fr; padding: 20px; }
+  /* The square photo area in the HOD card */
   .staff-hod-img { max-width: 240px; }
+  /* The row with email and research links at the bottom of the HOD card */
   .staff-hod-meta { flex-direction: column; gap: 8px; }
+  /* A narrower single-column version of the staff grid */
   .staff-grid-1col { grid-template-columns: 1fr; }
+  /* The grid of round executive member cards */
   .staff-exec-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -2005,6 +2272,7 @@ main {
   margin-bottom: 40px;
 }
 
+/* A single tab button in the events page */
 .events-tab {
   padding: 10px 28px;
   border: none;
@@ -2017,11 +2285,13 @@ main {
   color: var(--on-surface-variant);
 }
 
+/* Highlights the tab with a pale background on hover */
 .events-tab:hover {
   color: var(--primary);
   background: rgba(0,10,30,0.04);
 }
 
+/* Fills the active tab with dark navy */
 .events-tab.active {
   background: var(--primary);
   color: #fff;
@@ -2032,6 +2302,7 @@ main {
   display: none;
 }
 
+/* Shows the currently selected tab panel */
 .events-view.active {
   display: block;
 }
@@ -2048,16 +2319,19 @@ main {
   transition: box-shadow 0.3s;
 }
 
+/* Adds a shadow to the featured card on hover */
 .ev-featured-card:hover {
   box-shadow: 0 8px 28px rgba(0,10,30,0.08);
 }
 
+/* The photo area of the featured article */
 .ev-featured-img {
   height: 100%;
   min-height: 300px;
   overflow: hidden;
 }
 
+/* The featured article image */
 .ev-featured-img img {
   width: 100%;
   height: 100%;
@@ -2065,16 +2339,19 @@ main {
   transition: transform 0.5s;
 }
 
+/* Gently zooms the featured image on hover */
 .ev-featured-card:hover .ev-featured-img img {
   transform: scale(1.04);
 }
 
+/* The text area beside the featured article image */
 .ev-featured-body {
   padding: 40px;
   display: flex;
   flex-direction: column;
 }
 
+/* The row with a category tag and date above the article title */
 .ev-meta-row {
   display: flex;
   align-items: center;
@@ -2082,6 +2359,7 @@ main {
   margin-bottom: 14px;
 }
 
+/* A gold category tag like "Research" or "Students" */
 .ev-tag {
   background: var(--secondary-light);
   color: var(--secondary);
@@ -2093,26 +2371,31 @@ main {
   letter-spacing: 0.05em;
 }
 
+/* An outlined version of the category tag */
 .ev-tag-outline {
   background: transparent;
   color: var(--secondary);
   border: 1px solid var(--secondary-light);
 }
 
+/* The article publication date */
 .ev-date {
   font-size: 0.8rem;
   color: var(--on-surface-variant);
 }
 
+/* The featured article headline */
 .ev-featured-body h2 {
   font-size: 1.6rem;
   margin-bottom: 14px;
 }
 
+/* Turns the headline gold on hover */
 .ev-featured-body h2 a:hover {
   color: var(--secondary);
 }
 
+/* The featured article summary */
 .ev-featured-body p {
   font-size: 0.9rem;
   color: var(--on-surface-variant);
@@ -2121,6 +2404,7 @@ main {
   flex-grow: 1;
 }
 
+/* The "Read Full Article" link with an arrow */
 .ev-read-more {
   font-weight: 600;
   font-size: 0.9rem;
@@ -2131,6 +2415,7 @@ main {
   align-items: center;
 }
 
+/* Moves the arrow right and turns gold on hover */
 .ev-read-more:hover {
   gap: 8px;
   color: var(--secondary);
@@ -2143,6 +2428,7 @@ main {
   gap: 20px;
 }
 
+/* A single news article card with image and text */
 .ev-news-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -2153,16 +2439,19 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Lifts the news card on hover */
 .ev-news-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0,10,30,0.08);
 }
 
+/* The photo area at the top of a news card */
 .ev-news-img {
   height: 180px;
   overflow: hidden;
 }
 
+/* The news article photo */
 .ev-news-img img {
   width: 100%;
   height: 100%;
@@ -2170,10 +2459,12 @@ main {
   transition: transform 0.4s;
 }
 
+/* Gently zooms the news photo on hover */
 .ev-news-card:hover .ev-news-img img {
   transform: scale(1.06);
 }
 
+/* The text area below the photo in a news card */
 .ev-news-body {
   padding: 20px;
   display: flex;
@@ -2181,15 +2472,18 @@ main {
   flex-grow: 1;
 }
 
+/* The news article heading */
 .ev-news-body h3 {
   font-size: 1.05rem;
   margin-bottom: 8px;
 }
 
+/* Turns the heading gold on hover */
 .ev-news-body h3 a:hover {
   color: var(--secondary);
 }
 
+/* The short news summary text */
 .ev-news-body p {
   font-size: 0.82rem;
   color: var(--on-surface-variant);
@@ -2204,6 +2498,7 @@ main {
   gap: 20px;
 }
 
+/* A single event card with a date badge and event details */
 .ev-event-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -2214,11 +2509,13 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Lifts the event card on hover */
 .ev-event-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0,10,30,0.08);
 }
 
+/* The small box showing the event day and month */
 .ev-event-date-badge {
   display: flex;
   flex-direction: column;
@@ -2232,6 +2529,7 @@ main {
   flex-shrink: 0;
 }
 
+/* The large day number in the date badge */
 .ev-event-day {
   font-size: 1.3rem;
   font-weight: 700;
@@ -2239,6 +2537,7 @@ main {
   line-height: 1;
 }
 
+/* The three-letter month abbreviation in the date badge */
 .ev-event-month {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -2246,21 +2545,25 @@ main {
   letter-spacing: 0.05em;
 }
 
+/* The event title, time, location, and register link */
 .ev-event-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
+/* The event title */
 .ev-event-info h3 {
   font-size: 1rem;
   margin-bottom: 4px;
 }
 
+/* Turns the event title gold on hover */
 .ev-event-info h3 a:hover {
   color: var(--secondary);
 }
 
+/* A single row with an icon and text for time or location */
 .ev-event-meta {
   display: flex;
   align-items: center;
@@ -2269,6 +2572,7 @@ main {
   color: var(--on-surface-variant);
 }
 
+/* The small icon beside the event time or location */
 .ev-event-meta svg {
   width: 14px;
   height: 14px;
@@ -2276,6 +2580,7 @@ main {
   flex-shrink: 0;
 }
 
+/* The "Register" link at the bottom of an event card */
 .ev-event-cta {
   margin-top: auto;
   font-size: 0.8rem;
@@ -2284,6 +2589,7 @@ main {
   padding-top: 8px;
 }
 
+/* Turns the register link gold on hover */
 .ev-event-cta:hover {
   color: var(--secondary);
 }
@@ -2294,11 +2600,13 @@ main {
   background: var(--surface-low);
 }
 
+/* The heading in the subscribe section */
 .ev-cta h2 {
   font-size: 1.8rem;
   margin-bottom: 12px;
 }
 
+/* The description in the subscribe section */
 .ev-cta p {
   color: var(--on-surface-variant);
   margin-bottom: 24px;
@@ -2307,6 +2615,7 @@ main {
   margin-right: auto;
 }
 
+/* The email input and subscribe button side by side */
 .ev-subscribe-form {
   display: flex;
   gap: 10px;
@@ -2314,6 +2623,7 @@ main {
   margin: 0 auto;
 }
 
+/* The email address input field */
 .ev-subscribe-form input {
   flex: 1;
   padding: 12px 16px;
@@ -2325,23 +2635,33 @@ main {
   transition: border-color 0.3s;
 }
 
+/* Highlights the email input with a blue border when focused */
 .ev-subscribe-form input:focus {
   border-color: var(--primary);
 }
 
 @media (max-width: 900px) {
+  /* The large two-column featured article at the top of the news section */
   .ev-featured-card { grid-template-columns: 1fr; }
+  /* The grid of smaller news article cards */
   .ev-news-grid { grid-template-columns: repeat(2, 1fr); }
+  /* The grid of upcoming event cards */
   .ev-events-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
 
+  /* The tab bar that switches between Latest News and Upcoming Events */
   .events-tabs { width: 100%; overflow-x: auto; }
+  /* The text area beside the featured article image */
   .ev-featured-body { padding: 24px; }
+  /* The featured article headline */
   .ev-featured-body h2 { font-size: 1.25rem; }
+  /* The grid of smaller news article cards */
   .ev-news-grid { grid-template-columns: 1fr; }
+  /* The grid of upcoming event cards */
   .ev-events-grid { grid-template-columns: 1fr; }
+  /* The email input and subscribe button side by side */
   .ev-subscribe-form { flex-direction: column; }
 }
 
@@ -2354,6 +2674,7 @@ main {
   margin-bottom: 48px;
 }
 
+/* A single contact info card with an icon and details */
 .cnt-info-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -2363,11 +2684,13 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Lifts the info card on hover */
 .cnt-info-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0,10,30,0.08);
 }
 
+/* The dark-navy square holding the contact icon */
 .cnt-info-icon {
   width: 44px;
   height: 44px;
@@ -2380,26 +2703,31 @@ main {
   justify-content: center;
 }
 
+/* The icon inside each contact card */
 .cnt-info-icon svg {
   width: 22px;
   height: 22px;
 }
 
+/* The heading like "Our Location" or "Email Us" */
 .cnt-info-card h3 {
   font-size: 0.95rem;
   margin-bottom: 8px;
 }
 
+/* The contact details text */
 .cnt-info-card p {
   font-size: 0.82rem;
   color: var(--on-surface-variant);
   line-height: 1.55;
 }
 
+/* Makes email links plain grey */
 .cnt-info-card a {
   color: var(--on-surface-variant);
 }
 
+/* Changes link colour to dark navy on hover */
 .cnt-info-card a:hover {
   color: var(--primary);
 }
@@ -2426,30 +2754,35 @@ main {
   margin-bottom: 6px;
 }
 
+/* The instruction text above the contact form */
 .cnt-form-box p {
   font-size: 0.85rem;
   color: var(--on-surface-variant);
   margin-bottom: 24px;
 }
 
+/* The contact form with all fields stacked vertically */
 .cnt-form {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
+/* A two-column row inside the form (for first name and last name) */
 .cnt-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
+/* A single form field — label on top, input below */
 .cnt-form-group {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
+/* The label text above each form input */
 .cnt-form-group label {
   font-size: 0.82rem;
   font-weight: 600;
@@ -2457,6 +2790,7 @@ main {
 
 .cnt-form-group input,
 .cnt-form-group select,
+/* Allows the message box to be stretched taller if needed */
 .cnt-form-group textarea {
   padding: 10px 14px;
   border-radius: 6px;
@@ -2475,10 +2809,12 @@ main {
   box-shadow: 0 0 0 3px rgba(0,10,30,0.06);
 }
 
+/* Allows the message box to be stretched taller if needed */
 .cnt-form-group textarea {
   resize: vertical;
 }
 
+/* The submit button, aligned to the left */
 .cnt-form-box .btn {
   align-self: flex-start;
   padding: 11px 28px;
@@ -2494,12 +2830,14 @@ main {
   margin-top: 16px;
 }
 
+/* The map image inside the embed area */
 .cnt-map-embed img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* A dark overlay with a location pin on top of the map */
 .cnt-map-overlay {
   position: absolute;
   inset: 0;
@@ -2512,12 +2850,14 @@ main {
   gap: 12px;
 }
 
+/* The large pin icon on the map */
 .cnt-map-overlay svg {
   width: 48px;
   height: 48px;
   opacity: 0.8;
 }
 
+/* The text label on top of the map overlay */
 .cnt-map-overlay p {
   font-weight: 600;
   font-size: 1rem;
@@ -2533,6 +2873,7 @@ main {
   border-top: 1px solid var(--outline-variant);
 }
 
+/* The "Follow Us" heading above the social icons */
 .cnt-social-row h3 {
   font-size: 0.9rem;
   color: var(--on-surface-variant);
@@ -2541,12 +2882,14 @@ main {
   letter-spacing: 0.08em;
 }
 
+/* The row of circular social media icon buttons */
 .cnt-social-links {
   display: flex;
   justify-content: center;
   gap: 14px;
 }
 
+/* A single circular social media button */
 .cnt-social-links a {
   width: 44px;
   height: 44px;
@@ -2560,6 +2903,7 @@ main {
   transition: all 0.3s;
 }
 
+/* Fills the button with navy and lifts it on hover */
 .cnt-social-links a:hover {
   background: var(--primary);
   color: #fff;
@@ -2567,20 +2911,26 @@ main {
   transform: translateY(-4px);
 }
 
+/* The social media icon inside each circle */
 .cnt-social-links a svg {
   width: 20px;
   height: 20px;
 }
 
 @media (max-width: 900px) {
+  /* The row of four info cards (Location, Email, Phone, Hours) */
   .cnt-info-row { grid-template-columns: repeat(2, 1fr); }
+  /* The two-column layout with the contact form and map side by side */
   .cnt-main-layout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
 
+  /* The row of four info cards (Location, Email, Phone, Hours) */
   .cnt-info-row { grid-template-columns: 1fr; }
+  /* A two-column row inside the form (for first name and last name) */
   .cnt-form-row { grid-template-columns: 1fr; }
+  /* The Google Maps area showing the campus location */
   .cnt-map-embed { height: 240px; }
 }
 
@@ -2592,6 +2942,7 @@ main {
   margin-top: auto;
 }
 
+/* A four-column grid inside the footer */
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -2599,12 +2950,14 @@ main {
   padding-bottom: 40px;
 }
 
+/* The leftmost column with the logo and description */
 .footer-brand-col {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+/* The TTU-CSD logo and name at the top of the footer */
 .footer-brand {
   font-family: var(--font-serif);
   font-size: 1.5rem;
@@ -2615,6 +2968,7 @@ main {
   gap: 8px;
 }
 
+/* The short description of the department in the footer */
 .footer-desc {
   font-size: 0.9rem;
   opacity: 0.7;
@@ -2622,12 +2976,14 @@ main {
   max-width: 320px;
 }
 
+/* The row of social media icons in the footer */
 .footer-social {
   display: flex;
   gap: 12px;
   margin-top: 8px;
 }
 
+/* A single circular social media icon in the footer */
 .footer-social a {
   width: 38px;
   height: 38px;
@@ -2640,29 +2996,34 @@ main {
   transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
+/* Fills the icon with gold and lifts it on hover */
 .footer-social a:hover {
   background: var(--secondary-light);
   color: var(--primary);
   transform: translateY(-3px);
 }
 
+/* The social media icon inside each footer circle */
 .footer-social a svg {
   width: 18px;
   height: 18px;
 }
 
+/* A single column of links in the footer */
 .footer-col {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+/* The footer column heading */
 .footer-col h4 {
   color: var(--footer-heading);
   font-size: 1rem;
   margin-bottom: 4px;
 }
 
+/* A list of links inside a footer column */
 .footer-col ul {
   list-style: none;
   display: flex;
@@ -2670,17 +3031,20 @@ main {
   gap: 10px;
 }
 
+/* A single link inside the footer column */
 .footer-col ul a {
   color: var(--footer-text);
   font-size: 0.88rem;
   transition: color 0.3s, padding-left 0.3s;
 }
 
+/* Turns the link gold and slides it right slightly on hover */
 .footer-col ul a:hover {
   color: var(--secondary-light);
   padding-left: 4px;
 }
 
+/* A single contact line with an icon and text */
 .footer-contact-list li {
   display: flex;
   align-items: flex-start;
@@ -2689,6 +3053,7 @@ main {
   line-height: 1.5;
 }
 
+/* The small icon beside each footer contact line */
 .footer-contact-list li svg {
   width: 16px;
   height: 16px;
@@ -2697,21 +3062,25 @@ main {
   opacity: 0.6;
 }
 
+/* The bottom bar with the copyright notice */
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 20px 0;
 }
 
+/* The copyright text at the very bottom */
 .footer-bottom p {
   font-size: 0.8rem;
   opacity: 0.5;
 }
 
 @media (max-width: 992px) {
+  /* A four-column grid inside the footer */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
   }
+  /* The leftmost column with the logo and description */
   .footer-brand-col {
     grid-column: 1 / -1;
   }
@@ -2726,6 +3095,7 @@ main {
   margin-bottom: 48px;
 }
 
+/* A single step card with a number circle, title, and description */
 .book-step {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -2734,6 +3104,7 @@ main {
   text-align: center;
 }
 
+/* The dark-navy number circle showing step 1, 2, or 3 */
 .book-step-num {
   width: 40px;
   height: 40px;
@@ -2748,11 +3119,13 @@ main {
   margin: 0 auto 14px;
 }
 
+/* The step title like "Choose Purpose" */
 .book-step h3 {
   font-size: 1rem;
   margin-bottom: 8px;
 }
 
+/* The explanation below each step title */
 .book-step p {
   font-size: 0.82rem;
   color: var(--on-surface-variant);
@@ -2767,6 +3140,7 @@ main {
   align-items: start;
 }
 
+/* The white appointment booking form */
 .book-form {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -2774,21 +3148,25 @@ main {
   overflow: hidden;
 }
 
+/* The top section of the form with the title and description */
 .book-form-header {
   padding: 28px 32px 0;
 }
 
+/* The booking form title */
 .book-form-header h2 {
   font-size: 1.4rem;
   margin-bottom: 6px;
 }
 
+/* The instruction text above the form fields */
 .book-form-header p {
   font-size: 0.85rem;
   color: var(--on-surface-variant);
   margin-bottom: 24px;
 }
 
+/* The main section of the form with all the input fields */
 .book-form-body {
   padding: 0 32px;
   display: flex;
@@ -2796,18 +3174,21 @@ main {
   gap: 18px;
 }
 
+/* A two-column row inside the booking form */
 .book-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
+/* A single form field — label on top, input below */
 .book-fg {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
+/* The label above each form field */
 .book-fg label {
   font-size: 0.82rem;
   font-weight: 600;
@@ -2815,6 +3196,7 @@ main {
 
 .book-fg input,
 .book-fg select,
+/* Allows the message box to be stretched taller */
 .book-fg textarea {
   padding: 10px 14px;
   border-radius: 6px;
@@ -2833,21 +3215,25 @@ main {
   box-shadow: 0 0 0 3px rgba(0,10,30,0.06);
 }
 
+/* Allows the message box to be stretched taller */
 .book-fg textarea {
   resize: vertical;
 }
 
+/* The bottom section of the form with the submit button */
 .book-form-footer {
   padding: 24px 32px 28px;
   border-top: 1px solid var(--outline-variant);
   margin-top: 24px;
 }
 
+/* The submit booking button */
 .book-form-footer .btn {
   border-radius: 6px;
   padding: 12px 28px;
 }
 
+/* The small note about confirmation emails below the submit button */
 .book-form-note {
   font-size: 0.75rem;
   color: var(--on-surface-variant);
@@ -2861,6 +3247,7 @@ main {
   gap: 16px;
 }
 
+/* A white card in the sidebar with contact info or office hours */
 .book-sidebar-card {
   background: var(--surface);
   border: 1px solid var(--outline-variant);
@@ -2868,11 +3255,13 @@ main {
   padding: 24px;
 }
 
+/* The sidebar card heading */
 .book-sidebar-card h3 {
   font-size: 1rem;
   margin-bottom: 8px;
 }
 
+/* The text inside a sidebar card */
 .book-sidebar-card p {
   font-size: 0.82rem;
   color: var(--on-surface-variant);
@@ -2880,12 +3269,14 @@ main {
   line-height: 1.55;
 }
 
+/* The stacked list of contact details in the sidebar */
 .book-sidebar-contact {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* A single contact detail row with an icon */
 .book-sidebar-contact span {
   display: flex;
   align-items: center;
@@ -2894,6 +3285,7 @@ main {
   color: var(--on-surface-variant);
 }
 
+/* The small icon beside each contact detail */
 .book-sidebar-contact svg {
   width: 16px;
   height: 16px;
@@ -2901,12 +3293,14 @@ main {
   opacity: 0.6;
 }
 
+/* The stacked list of office hours */
 .book-hours {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+/* A single day-and-hours row */
 .book-hours-row {
   display: flex;
   justify-content: space-between;
@@ -2914,6 +3308,7 @@ main {
   color: var(--on-surface-variant);
 }
 
+/* Bolds the day name (e.g. Monday – Friday) */
 .book-hours-row span:first-child {
   font-weight: 500;
 }
@@ -2931,34 +3326,42 @@ main {
   justify-content: center;
 }
 
+/* The white checkmark inside the green circle */
 .book-success-icon svg {
   width: 32px;
   height: 32px;
 }
 
+/* The success message heading */
 .book-success h2 {
   font-size: 1.6rem;
   margin-bottom: 8px;
 }
 
+/* The success message description */
 .book-success p {
   color: var(--on-surface-variant);
   margin-bottom: 24px;
 }
 
 @media (max-width: 900px) {
+  /* The three-step guide showing how booking works */
   .book-steps { grid-template-columns: 1fr; }
+  /* The two-column layout with the booking form and sidebar */
   .book-form-wrap { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
+  /* A two-column row inside the booking form */
   .book-form-row { grid-template-columns: 1fr; }
   .book-form-header,
   .book-form-body,
+  /* The bottom section of the form with the submit button */
   .book-form-footer { padding-left: 20px; padding-right: 20px; }
 }
 
 @media (max-width: 640px) {
+  /* A four-column grid inside the footer */
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 28px;
